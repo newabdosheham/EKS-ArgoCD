@@ -14,8 +14,11 @@ terraform {
       version = "~> 2.10.0"
     }
   }
+
+#Create your own bucket and DynamoDB table: Lock-Files
+
   backend "s3" {
-    bucket         = "my-ews-baket1"
+    bucket         = "My_Bucket_name"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
     dynamodb_table = "Lock-Files"
